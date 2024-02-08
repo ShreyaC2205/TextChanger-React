@@ -5,7 +5,7 @@
 
 //just type "rfc" it will give react function based component
 import React from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Navbar(props) {
   //WE SHOULD NOT CHANGE PROPS HERE IN COMPONENT AT ANY COST, HERE PROPS SHOULD BE READ ONLY, WE WILL PASS THE THINGS FROM THE MAIN APP.JS
@@ -33,7 +33,7 @@ export default function Navbar(props) {
       <div className="container-fluid">
         {/*this(below)) was the previous name of our website */}
         {/* <a className="navbar-brand" href="/">TextChanger</a> */}{" "}
-        <a className="navbar-brand" href="/">
+        <a className="navbar-brand" href="#">
           {/*here we are passing the title from App.js */}
           {props.title} {/*sended from app.js <Navbar/> tag */}
         </a>{" "}
@@ -53,14 +53,14 @@ export default function Navbar(props) {
             <li className="nav-item">
               {/* <a className="nav-link active" aria-current="page" to="/">{" "} */}
               {/*we were using a and href for router */}
-              <a className="nav-link" aria-current="page" href="/">
+              <Link className="nav-link" aria-current="page" to="/">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/about">
+              <Link className="nav-link" to="/about">
                 {props.aboutText} {/*sended from app.js <Navbar/> tag*/}
-              </a>
+              </Link>
             </li>
           </ul>
 

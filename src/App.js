@@ -10,7 +10,7 @@ import Navbar from "./components/Navbar"; //this will autometiaclly get imported
 import TextForm from "./components/TextForm";
 
 //IMPORTING REACT ROUTER
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 // let name = "Shreya"; //we can use variables inside JSX, we can use conditional expressions and ternory operators, object etc
 
@@ -183,7 +183,6 @@ function App() { //function based component
 
     //ADVANTAGE OF USING COMPONENT is that we can use that part (ex- here the component is navbar) in any of our website and we can do few changes if needed. but the BENEFITE here is WE WONT HAE TO WRITE THE COMPLETE NAVBAR CODE AGAIN AND AGAIN
     <>
-      <Router basename="/TextChanger-React">
         <Navbar
           title="TextChanger"
           aboutText="About TextChanger"
@@ -213,7 +212,7 @@ function App() { //function based component
             />
             <Route
               exact
-              path="/TextChanger-React"
+              path="/"
               element={
                 <TextForm
                   heading="Try TextChanger - Word counter, Character counter, Remove extra spaces"
@@ -230,7 +229,6 @@ function App() { //function based component
           {/*FOURTH COMPONENT*/}
           {/* <About/> */}
         </div>
-      </Router>
     </>
   );
 }
